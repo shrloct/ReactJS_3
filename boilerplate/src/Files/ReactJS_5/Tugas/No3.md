@@ -2,15 +2,12 @@
 
 import React, { createContext, useReducer, useContext } from 'react';
 
-// Action Types
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 const RESET = 'RESET';
 
-// Initial State
 const initialState = { count: 0 };
 
-// Reducer Function
 const counterReducer = (state, action) => {
 switch (action.type) {
 case INCREMENT:
