@@ -25,7 +25,7 @@ export const useTheme = () => useContext(ThemeContext);
 
 import React from 'react';
 import { ThemeProvider, useTheme } from './ThemeContext';
-import './App.css'; // Pastikan Anda membuat CSS untuk tema terang dan gelap
+import './App.css';
 
 const ThemedComponent = () => {
 const { isDarkMode, toggleTheme } = useTheme();

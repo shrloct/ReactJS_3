@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import CounterContext from "./CounterContext";
 
 function CounterComponent() {
-  // Menggunakan useContext untuk mengakses state dan dispatch dari context
   const { state, dispatch } = useContext(CounterContext);
 
   return (
