@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import { UserProvider } from "./UserContext";
+import { CounterProvider } from "./CounterContext";
+import LoginForm from "./LoginForm";
+import UserProfile from "./UserProfile";
+import Counter from "./Counter";
 
-function Counter() {
-  // Menggunakan useState untuk mendefinisikan state 'count' dengan nilai awal 0
-  const [count, setCount] = useState(0);
+const App = () => (
+  <UserProvider>
+    <CounterProvider>
+      <div>
+        <h1>Aplikasi Pengguna dan Counter</h1>
+        <LoginForm />
+        <UserProfile />
+        <Counter />
+      </div>
+    </CounterProvider>
+  </UserProvider>
+);
 
-  // Fungsi untuk menambah nilai count ketika tombol ditekan
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  return (
-    <div>
-      <h1>Hitungan: {count}</h1>
-      {/* Menambahkan onClick event handler yang memanggil fungsi increment */}
-      <button onClick={increment}>Tambah</button>
-    </div>
-  );
-}
-
-export default Counter;
+export default App;
